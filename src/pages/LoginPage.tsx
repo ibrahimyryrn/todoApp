@@ -90,8 +90,6 @@ const LoginPage = () => {
         localStorage.setItem("refreshToken", refresh_token);
         const res = await getUserRole(user.id);
         const role = await getRoleName(res[0].role_id);
-        console.log(res[0].role_id);
-        console.log(role[0].role_name);
 
         setTimeout(() => {
           alert("Successfully login! Redirecting to home page...");
