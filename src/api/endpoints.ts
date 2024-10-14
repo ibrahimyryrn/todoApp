@@ -24,7 +24,7 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor - token yenileme mantığı
+// Response interceptor - token yenileme mantıği
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
