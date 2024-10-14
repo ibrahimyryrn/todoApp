@@ -16,12 +16,7 @@ function EditTodo() {
       if (todo.title && todo.description) {
         try {
           if (todo && access_token) {
-            await updateTodo(
-              todo.id,
-              todo.title,
-              todo.description,
-              access_token
-            );
+            await updateTodo(todo.id, todo.title, todo.description);
             dispatch(clearEditTodo());
           }
         } catch (error) {

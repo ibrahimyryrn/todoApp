@@ -15,7 +15,7 @@ function CreateTodo() {
       if (todo.title && todo.description) {
         try {
           if (todo && access_token) {
-            await postTodo(todo, access_token);
+            await postTodo(todo);
             dispatch(clearTodo());
           }
         } catch (error) {
