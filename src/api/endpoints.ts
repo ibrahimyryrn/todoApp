@@ -166,7 +166,7 @@ export const updateIsCompleted = async (
 
 export default api;
 
-export const getUserRole = async (user_id: string) => {
+export const getUserRole = async (user_id: string | undefined) => {
   const response = await api.get(
     `/rest/v1/user_roles?user_id=eq.${user_id}&select=role_id`
   );

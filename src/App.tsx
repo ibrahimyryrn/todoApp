@@ -4,6 +4,7 @@ import Homepage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import PrivateRoute from "./utils/PrivateRoute";
 import AdminPage from "./pages/AdminPage";
+import PrivateAdminRoute from "./utils/PrivateAdminRoute";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
 
         <Route element={<PrivateRoute />}>
           <Route path="/home" element={<Homepage />} />
-          <Route path="/admin" element={<AdminPage />} />
+          <Route element={<PrivateAdminRoute />}>
+            <Route path="/admin" element={<AdminPage />} />
+          </Route>
         </Route>
       </Routes>
     </div>
