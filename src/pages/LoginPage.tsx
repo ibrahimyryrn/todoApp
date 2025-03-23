@@ -61,7 +61,12 @@ const LoginPage = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFormInputs>();
+  } = useForm<LoginFormInputs>({
+    defaultValues: {
+      email: "user@example.com",
+      password: "12345",
+    },
+  });
 
   const onSubmit = async (data: LoginFormInputs) => {
     try {
